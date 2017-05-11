@@ -82,7 +82,7 @@ section {
   margin: 0;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 400px) {
   #projects .six.columns {
     width: 100%;
     margin: 0;
