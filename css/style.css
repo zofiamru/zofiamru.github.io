@@ -137,6 +137,11 @@ main a:hover {
   justify-content: center;
 }
 
+/*.project a {
+  display: block;
+  height: 100%;
+}*/
+
 .project img {
   max-width: 100px;
   max-height: 60px;
