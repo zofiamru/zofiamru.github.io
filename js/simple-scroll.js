@@ -1,66 +1,69 @@
-document.addEventListener("DOMContentLoaded", () => {
+"use strict";
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+document.addEventListener("DOMContentLoaded", function () {
   "use strict";
 
-  const root = (() => {
+  var root = function () {
     if ("scrollingElement" in document) return document.scrollingElement;
-    const html = document.documentElement;
-    const start = html.scrollTop;
+    var html = document.documentElement;
+    var start = html.scrollTop;
     html.scrollTop = start + 1;
-    const end = html.scrollTop;
+    var end = html.scrollTop;
     html.scrollTop = start;
     return end > start ? html : document.body;
-  })();
+  }();
 
-  const ease = (duration, elapsed, start, end) =>
-    Math.round(end * (-Math.pow(2, -10 * elapsed/duration) + 1) + start);
+  var ease = function ease(duration, elapsed, start, end) {
+    return Math.round(end * (-Math.pow(2, -10 * elapsed / duration) + 1) + start);
+  };
 
-  const getCoordinates = hash => {
-    const start = root.scrollTop;
-    const delta = (() => {
+  var getCoordinates = function getCoordinates(hash) {
+    var start = root.scrollTop;
+    var delta = function () {
       if (hash.length < 2) return -start;
-      const target = document.querySelector(hash);
+      var target = document.querySelector(hash);
       if (!target) return;
-      const top = target.getBoundingClientRect().top;
-      const max = root.scrollHeight - window.innerHeight;
+      var top = target.getBoundingClientRect().top;
+      var max = root.scrollHeight - window.innerHeight;
       return start + top < max ? top : max - start;
-    })();
+    }();
     if (delta) return new Map([["start", start], ["delta", delta]]);
   };
 
-  const scroll = link => {
-    const hash = link.getAttribute("href");
-    const coordinates = getCoordinates(hash);
+  var scroll = function scroll(link) {
+    var hash = link.getAttribute("href");
+    var coordinates = getCoordinates(hash);
     if (!coordinates) return;
 
-    const tick = timestamp => {
+    var tick = function tick(timestamp) {
       progress.set("elapsed", timestamp - start);
-      root.scrollTop = ease(...progress.values(), ...coordinates.values());
-      progress.get("elapsed") < progress.get("duration")
-      ? requestAnimationFrame(tick)
-      : complete(hash, coordinates);
+      root.scrollTop = ease.apply(undefined, _toConsumableArray(progress.values()).concat(_toConsumableArray(coordinates.values())));
+      progress.get("elapsed") < progress.get("duration") ? requestAnimationFrame(tick) : complete(hash, coordinates);
     };
 
-    const progress = new Map([["duration", 800]]);
-    const start = performance.now();
+    var progress = new Map([["duration", 800]]);
+    var start = performance.now();
     requestAnimationFrame(tick);
   };
 
-  const complete = (hash, coordinates) => {
+  var complete = function complete(hash, coordinates) {
     history.pushState(null, null, hash);
     root.scrollTop = coordinates.get("start") + coordinates.get("delta");
   };
 
-  const attachHandler = (links, index) => {
-    const link = links.item(index);
-    link.addEventListener("click", event => {
+  var attachHandler = function attachHandler(links, index) {
+    var link = links.item(index);
+    link.addEventListener("click", function (event) {
       event.preventDefault();
       scroll(link);
     });
     if (index) return attachHandler(links, index - 1);
   };
 
-  const links = document.querySelectorAll("a.scroll");
-  const last = links.length - 1;
+  var links = document.querySelectorAll("a.scroll");
+  var last = links.length - 1;
   if (last < 0) return;
   attachHandler(links, last);
 });
