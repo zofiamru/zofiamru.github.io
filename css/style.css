@@ -179,8 +179,7 @@ main li {
 }
 
 @media (max-width: 549px) {
-  #about h5{
+  #about h4{
     text-align: center;
-    padding: 0px 25px 0px 0px;
   }
 }
