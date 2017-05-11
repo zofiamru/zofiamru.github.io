@@ -34,7 +34,7 @@ header li {
   display: inline-block;
   height: 70px;
   line-height: 70px;
-  padding: 0 10px;
+  padding: 0px 25px 0px 0px;
 }
 
 header a {
