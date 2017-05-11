@@ -153,3 +153,13 @@ section {
 footer {
   padding: 20px 0;
 }
+
+footer li {
+  color: black;
+  display: inline-block;
+}
+
+main li {
+  color: black;
+  display: inline-block;
+}
