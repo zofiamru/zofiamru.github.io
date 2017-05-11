@@ -77,6 +77,16 @@ section {
   margin: 0;
 }
 
+main a{
+  color: black;
+  text-decoration: none;
+}
+
+main a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
 #projects .six.columns {
   width: 50%;
   margin: 0;
@@ -149,6 +159,7 @@ section {
 .project-four {
   background: #DBCC00;
 }
+
 
 footer {
   padding: 20px 0;
