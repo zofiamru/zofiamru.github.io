@@ -4,16 +4,25 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Zofia Mrugacz</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" /> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/simple-scroll.js" charset="utf-8"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- <link rel="stylesheet" href="css/outline.css"> -->
+
 </head>
 <body>
   <header>
     <a href="/">
-      <img src="images/zm-logo.png" alt="logo">
+      <img class="logo" src="images/zm-logo.png" alt="logo">
     </a>
     <ul>
       <li><a href="#projects" class="scroll">PROJECTS</a></li>
@@ -24,77 +33,82 @@
   <main>
     <section id="welcome">
       <div class="container">
-        <h1>A day is happier<br>with good UX design :)</h1>
+        <h2>A day is happier<br>with good UX design :)</h2>
       </div>
     </section>
 
+
     <section id="projects">
+
       <div class="row text-center">
-        <a class="columns six project project-one" href="">
+        <a class="col l6 m6 s6 project project-one" id="project-one" href="https://medium.com/@zofiamrugacz/introducing-social-crowd-science-33f311f64c76" target="_blank">
           <div>
-            <img class="u-max-full-width" src="images/bike.png" alt="bike">
-            <p>Quiet London on Bike App</p>
+            <img class="u-max-full-width" src="images/cs-logo.png" alt="crowdscience">
+            <p>Redevelopment of website to help scientists get more projects crowdfunded by introducing social features. Amongst others, I facilitated the design studio with the clients and developed the high fidelity website mockup.</p>
           </div>
         </a>
-        <a class="columns six project project-two" href="">
+        <a class="col l6 m6 s6 project project-two" id="project-two" href="https://medium.com/@zofiamrugacz/air-france-in-flight-experience-app-b1280a4613b2" target="_blank">
           <div>
-            <img class="u-max-full-width" src="images/edge-shop.png" alt="shop">
-            <p>Online Shop for Edge Sports</p>
+            <img class="u-max-full-width" src="images/AirFr-logo.png" alt="airfrance">
+            <p>Integration of Air France’s current in-flight services into an app, in a team of three, with a two-week timeframe. We created a high-fidelity app prototype that we presented to the class with the equally important UX process.</p>
           </div>
         </a>
+
       <div class="row text-center">
-        <a class="columns six project project-three" href="">
+        <a class="col l6 m6 s6 project project-three" id="project-three" href="https://medium.com/@zofiamrugacz/sporting-goods-online-shop-33aa529705ff" target="_blank">
           <div>
-            <img class="u-max-full-width" src="images/x.png" alt="x"><p>Other Project</p>
+            <img class="u-max-full-width" src="images/shopping-bag.png" alt="edgeshop"><p>Online Shop for Edge Sports - An individual two-week project to create an online shop for a sporting goods company, with the workload extending from initial research to a digital prototype.</p>
           </div>
         </a>
-        <a class="columns six project project-four" href="">
-          <div><img class="u-max-full-width" src="images/x.png" alt="x"><p>Other Project</p>
+        <a class="col l6 m6 s6 project project-four" id="project-four" href="https://medium.com/@zofiamrugacz/quiet-london-on-bike-app-6030047e6835" target="_blank">
+          <div><img class="u-max-full-width" src="images/bike.png" alt="bike"><p>Quiet London on Bike App - A one-week project with a goal to improve a particular experience that my colleague was struggling with on a daily basis by creating a prototype app.</p>
           </div>
         </a>
       </div>
+
+    </section>
+
+    <section id="read-more">
+      <p>See the supporting case studies here:
+        <a class="medium" href="https://medium.com/@zofiamrugacz" target="_blank">medium.com/@zofiamrugacz</a>
+          </p>
     </section>
 
     <section id="about">
       <div class="container">
-        <div class="row">
-          <div class="columns four text-center">
-            <img class="u-max-full-width" src="images/zm-image.jpg" alt="profile">
-          </div>
-          <div class="columns eight">
             <div class="description">
-              <h4>
-                <ul>
-                  <li>UX DESIGNER - </li>
-                  <li>ZOFIA MRUGACZ</li>
-                </ul>
-              </h4>
-              <p>With a background in Architecture, I’ve always questioned the ways things are done. It is through understanding and testing with users that I create simple and efficient products, which in the end results in a happy day!
-              For further info check out my profile on
-              <a href="https://www.linkedin.com/in/zofia-mrugacz-55296956/" target="_blank">Linkedin</a>.</p>
-              <h5>FUN FACT</h5>
-              </a>
+              <h5>
+              <p class="flow-text"> <b> Hello,</b> I'm Zofia, I design user experiences that meet the objectives of both the user and the business, with the implementation of a full process, from early research to a working prototype. </p>
+              <p class="flow-text">I am currently looking for UX opportunities. Please reach out in - English - Polski - Italiano - Français - Deutsch, if you'd like to collaborate or say hello!</p>
+              </h5>
             </div>
           </div>
-        </div>
+
       </div>
     </section>
-    <section id="top">
-      <div class="container">
-        <a href="/" class="scroll">
-          <img src="images/back-to-top.png" alt="top">
-      </div>
+    <section id="to-top">
+        <a href="" class="scroll">
+          <img src="images/back-to-top.png" alt="top"></a>
     </section>
   </main>
+
   <footer>
-    <div class="columns twelve">
-    <div class="row text-center u-max-full-width" class="container">
-    <p>Contact me on</p>
-      <ul>
-        <li>Mobile: +447477616898</li>
-        <li>Email: zofiamrugacz@gmail.com</li>
-      </ul>
-  </div></div>
+    <div class="container">
+    <p><a class="gmail" href="mailto:zofiamrugacz@gmail.com">zofiamrugacz@gmail.com</a><br>
+      <a class="linkedin" href="https://www.linkedin.com/in/zofia-mrugacz/" target="_blank">linkedin.com/in/zofia-mrugacz</a><br>
+      <a class="twitter" href="https://twitter.com/zfmrg" target="_blank">twitter.com/zfmrg</a>
+    </p>
+
+
+      <!--
+      <ul class="social-icons">
+        <li><a href="https://www.linkedin.com/in/zofia-mrugacz/" target="_blank"><h4 class="ion-social-linkedin"></h4></a></li>
+        <li><a href="https://twitter.com/zfmrg">
+          <h4 class="ion-social-twitter"></h4></a></li>
+          <li><a href="mailto: zofiamrugacz@gmail.com">
+            <h4 class="ion-android-mail"></h4></a></li> -->
+
+    </div>
   </footer>
 
 </body>

@@ -18,22 +18,31 @@ html, body {
 }
 
 body {
-  font-family: "Helvetica Neue";
+  font-family: "Roboto", sans-serif;
+  font-weight: thin;
+  line-height: 1.5;
 }
 
 header {
   height: 70px;
   overflow: hidden;
+  font-size: 13px;
+}
+
+header .logo{
+  height: 65px;
 }
 
 header ul {
   float: right;
+  margin-top: 0;
 }
 
 header li {
   display: inline-block;
   height: 70px;
   line-height: 70px;
+  text-align: center;
   padding: 0px 25px 0px 0px;
 }
 
@@ -66,7 +75,7 @@ header img {
 }
 
 #welcome h1 {
-  font-weight: 500;
+  font-weight: 400;
 }
 
 section {
@@ -83,25 +92,87 @@ main a{
 }
 
 main a:hover {
-  text-decoration: underline;
-  color: yellow;
+  text-decoration: none;
+  color: #black;
   style: bold;
 }
 
-#projects .six.columns {
+/*
+#projects .col.l6 {
   width: 50%;
   margin: 0;
+}*/
+
+.description{
+  margin-top: 40px
 }
 
 @media (max-width: 400px) {
-  #projects .six.columns {
+  #projects .col.l6 {
     width: 100%;
     margin: 0;
   }
 }
 
-#projects .six.columns p {
+#projects .col.l6 p {
   margin: 0;
+}
+
+
+.project {
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.project img {
+  max-width: 100px;
+  max-height: 60px;
+}
+
+.project-one {
+  background: #0881A3;
+  height: 250px;
+}
+
+
+.project-two {
+  background: #DFB610;
+  height: 250px;
+}
+
+
+.project-three {
+  background: #82E0CD;
+  height: 250px;
+}
+
+.project-four {
+  background: #DBCC00;
+  height: 250px;
+}
+
+
+.project-details info project-four{
+  align-items: center;
+}
+
+#read-more{
+  background: #FFFFFF;
+  text-align: center;
+  padding:10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.medium{
+  color:#14C767;
+}
+
+#read-more img{
+  max-height: 30px;
 }
 
 
@@ -114,80 +185,72 @@ main a:hover {
   padding: 20px 0px;
 }
 
-#about h4 {
-  font-weight: 400;
-  font-size: 20px;
+#about .row.col.l6{
+  padding: 0px;
+}
+
+#about .img.col.l12{
+  padding: 0px;
 }
 
 #about h5 {
-  font-weight: 400;
-  font-size: 16px;
+  font-size: 10px;
+  font-weight: normal;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
 }
 
 #about a img {
-  width: 40px;
+  width: 20px;
 }
 
 .text-center{
   text-align: center;
 }
 
-#top{
+#to-top{
   background: #F9F9F9;
   text-align: center;
-
+  padding:10px;
 }
 
-.project {
-  min-height: 250px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/*.project a {
-  display: block;
-  height: 100%;
-}*/
-
-.project img {
-  max-width: 100px;
-  max-height: 60px;
-}
-
-.project-one {
-  background: #82E0CD;
-
-}
-
-.project-two {
-  background: #DFB610;
-}
-
-.project-three {
-  background: #0881A3;
-}
-
-.project-four {
-  background: #DBCC00;
-}
 
 footer {
   padding: 20px 0;
+  margin: 0 auto;
 }
 
-footer li {
+footer a {
   color: black;
-  display: inline-block;
 }
 
 main li {
   color: black;
   display: inline-block;
+  padding: 20px 0;
 }
+
+.gmail{
+  color: #CF5D46;
+}
+
+.twitter{
+  color: #50ABF1;
+}
+
+.linkedin{
+  color: #0076B7;
+}
+
+
 
 @media (max-width: 549px) {
   #about h4{
     text-align: center;
   }
+
+  #about .col.l12{
+    width: 100%;
+  }
+
 }
